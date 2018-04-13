@@ -13,18 +13,28 @@
 <body>
         <h1>Functions on a new branch!</h1> 
 
-        <input id="input-number" type="number">
+        <div>
+            square: <input name="power" checked type="radio" value="2">
+            cube: <input name="power" type="radio" value="3">
+        </div>
 
+        <input id="input-number" type="number">
         <button onclick="getSquare()">Get Square</button>
 
         <script>
             function getSquare() {
                 var input = document.getElementById('input-number');
+                var power = document.querySelector('input[name=power]:checked');
+                console.log(power.value);
                 //console.log(input.value);
 
+                var exponent = power.value;
                 var x = input.value;
-                var square = x * x;
-                console.log('square of', x, 'is', square);
+
+                //var square = x * x;
+                var answer = Math.pow(x, power.value);
+                //console.log('square of', x, 'is', square);
+                console.log(x, 'to the', exponent, 'is', answer);
             }
             
         
