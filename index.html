@@ -12,12 +12,17 @@
 
 <body>
         <h1>Functions on a new branch!</h1> 
+
+        <input id="input-number" type="number">
+
         <button onclick="getSquare()">Get Square</button>
 
         <script>
             function getSquare() {
+                var input = document.getElementById('input-number');
+                //console.log(input.value);
 
-                var x = +prompt('a number?');
+                var x = input.value;
                 var square = x * x;
                 console.log('square of', x, 'is', square);
             }
